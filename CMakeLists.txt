@@ -103,3 +103,9 @@ install(DIRECTORY rviz/
 install(FILES nodelet_plugins.xml
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
+
+#############
+# QTCREATOR #
+#############
+FILE(GLOB_RECURSE LibFiles "include/*")
+add_custom_target(headers SOURCES ${LibFiles})
